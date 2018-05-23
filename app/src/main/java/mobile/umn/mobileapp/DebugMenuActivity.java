@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MenuActivity extends AppCompatActivity {
+public class DebugMenuActivity extends AppCompatActivity {
 
     private Button buttonShowAll, buttonShowById;
 
@@ -19,7 +19,7 @@ public class MenuActivity extends AppCompatActivity {
         buttonShowAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MenuActivity.this, MasterItemListActivity.class);
+                Intent i = new Intent(DebugMenuActivity.this, MasterItemListActivity.class);
                 startActivity(i);
             }
         });
@@ -28,9 +28,18 @@ public class MenuActivity extends AppCompatActivity {
         buttonShowById.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MenuActivity.this, MainActivity.class);
+                Intent i = new Intent(DebugMenuActivity.this, MainActivity.class);
                 startActivity(i);
             }
+        });
+
+        findViewById(R.id.login_button).setOnClickListener((v)->{
+            Intent i = new Intent(DebugMenuActivity.this, LoginActivity.class);
+            startActivity(i);
+        });
+        findViewById(R.id.home_button).setOnClickListener((v)->{
+            Intent i = new Intent(DebugMenuActivity.this, HomeActivity.class);
+            startActivity(i);
         });
     }
 }
