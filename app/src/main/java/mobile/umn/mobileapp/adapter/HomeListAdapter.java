@@ -23,12 +23,14 @@ import mobile.umn.mobileapp.model.RequestHeader;
 public class HomeListAdapter extends RecyclerView.Adapter<HomeListAdapter.ViewHolder>{
     private ArrayList<RequestHeader> mDataset;
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder{
         public TextView request_id;
         public TextView request_type;
         public TextView request_name;
         public TextView request_date;
         public TextView request_total;
+        public Button button_approve;
+        public Button button_reject;
         public ViewHolder(CardView v) {
             super(v);
             request_id = (TextView)v.findViewById(R.id.text_request_id);
@@ -36,10 +38,26 @@ public class HomeListAdapter extends RecyclerView.Adapter<HomeListAdapter.ViewHo
             request_name = (TextView)v.findViewById(R.id.text_request_name);
             request_date = (TextView)v.findViewById(R.id.text_request_date);
             request_total = (TextView)v.findViewById(R.id.text_request_total);
-            v.findViewById(R.id.button_approve).setOnClickListener((view)->{
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+            button_approve = (Button)v.findViewById(R.id.button_approve);
+            button_reject = (Button)v.findViewById(R.id.button_reject);
+
+            button_approve.setOnClickListener((view -> {
+                int position = getAdapterPosition();
+                mDataset.remove(position);
+                notifyItemRemoved(position);
+                notifyItemRangeChanged(position, mDataset.size());
+                Snackbar.make(view, "Request Approved", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show();
-            });
+            }));
+
+            button_reject.setOnClickListener((view -> {
+                int position = getAdapterPosition();
+                mDataset.remove(position);
+                notifyItemRemoved(position);
+                notifyItemRangeChanged(position, mDataset.size());
+                Snackbar.make(view, "Request Rejected", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show();
+            }));
         }
     }
 
