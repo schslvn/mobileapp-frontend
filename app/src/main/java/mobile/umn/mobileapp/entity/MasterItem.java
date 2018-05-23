@@ -1,4 +1,4 @@
-package entity;
+package mobile.umn.mobileapp.entity;
 
 /**
  * Created by user on 5/17/2018.

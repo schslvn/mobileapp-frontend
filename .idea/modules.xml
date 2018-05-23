@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mobileapp.iml" filepath="$PROJECT_DIR$/mobileapp.iml" />
+      <module fileurl="file://D:\Git Projects\Mobile\mobileapp-frontend\app\app.iml" filepath="D:\Git Projects\Mobile\mobileapp-frontend\app\app.iml" />
+      <module fileurl="file://D:\Git Projects\Mobile\mobileapp-frontend\mobileapp.iml" filepath="D:\Git Projects\Mobile\mobileapp-frontend\mobileapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mobileapp-frontend.iml" filepath="$PROJECT_DIR$/mobileapp-frontend.iml" />
     </modules>
   </component>
 </project>

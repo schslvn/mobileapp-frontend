@@ -1,4 +1,4 @@
-package adapter;
+package mobile.umn.mobileapp.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -10,7 +10,7 @@ import android.widget.*;
 
 import java.util.List;
 
-import entity.MasterItem;
+import mobile.umn.mobileapp.entity.MasterItem;
 import mobile.umn.mobileapp.R;
 
 /**

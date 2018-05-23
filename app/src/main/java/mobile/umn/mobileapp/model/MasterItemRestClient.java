@@ -1,4 +1,4 @@
-package model;
+package mobile.umn.mobileapp.model;
 
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
@@ -6,7 +6,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
-import entity.MasterItem;
+import mobile.umn.mobileapp.entity.MasterItem;
 
 /**
  * Created by user on 5/17/2018.
